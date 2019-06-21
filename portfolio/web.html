@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+
+    <title>Hans Tercek | Web Archive</title>
+    <meta name="description" content="Hans Tercek: mechanical engineer and computer scientist.">
+
+    <meta property="og:url"            content="">
+    <meta property="og:type"           content="website">
+    <meta property="og:title"          content="Hans Tercek | Web Archive">
+    <meta property="og:description"    content="Hans Tercek: mechanical engineer and computer scientist.">
+    <meta property="og:image"          content="">
+    <meta name="twitter:card"          content="summary_large_image">
+    <meta name="twitter:site"          content="">
+    <meta name="twitter:creator"       content="">
+    <meta name="twitter:title"         content="Hans Tercek | Web Archive">
+    <meta name="twitter:description"   content="Hans Tercek: mechanical engineer and computer scientist.">
+    <meta name="twitter:image:src"     content="">
+
+    <!-- Stylesheets -->
+    <link rel="icon" href="../img/sign.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../styles/skeleton.css" type="text/css">
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
+    <style>
+        .content-container {
+            overflow: hidden;
+            height: 65%;
+        }
+        .display-content {
+            position: absolute;
+                left: 0;
+            width: 55%;
+            height: 100%;
+            padding-right: 5px;
+            overflow-x: wrap;
+            overflow-y: scroll;
+        }
+        .about-content{
+            position: absolute;
+                right: 0;
+            display: inline-block;
+            width: 35%;
+            height: 100%;
+            right: 5px;
+            overflow-y: scroll;
+        }
+        .web-item {
+            position: relative;
+            display: inline-block;
+            width: 90%;
+            padding-bottom: 55%;
+            margin: 2% 0 2% 5%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+
+            transition: all 0.5s ease;
+        }
+        .web-item a {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .web-item:hover {
+            filter: blur(0) grayscale(0);
+        }
+        .blurred {
+            filter: blur(3px) grayscale(60%);
+        }
+        /*** Items ***/
+        #item-1 { background-image: url('../img/portfolio/web/memory.png'); margin-top: 0; }
+        #item-2 { background-image: url('../img/portfolio/web/labor.png'); }
+        #item-3 { background-image: url('../img/portfolio/web/lit.png'); }
+        #item-4 { background-image: url('../img/portfolio/web/queerness.png'); }
+        #item-5 { background-image: url('../img/portfolio/web/blp.png'); }
+        #item-6 { background-image: url('../img/portfolio/web/cmyk.png'); margin-bottom: 0; }
+
+        @media (max-width: 550px) {
+            .content-container {
+                overflow-y: scroll;
+            }
+            .display-content {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+            .cad-item {
+                width: 95%;
+                padding-bottom: 55%;
+                margin: 0 auto;
+            }
+            .about-content {
+                position: relative;
+                margin-top: 20px;
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sign-nav"><a href="../past.html"><img src="../img/sign_exit.png" /></a></div>
+    <div class="content-container">
+        <div class="display-content">
+            <div class="web-item" id="item-1"><a href="#about-link"></a></div>
+            <div class="web-item" id="item-2"><a href="#about-link"></a></div>
+            <div class="web-item" id="item-3"><a href="#about-link"></a></div>
+            <div class="web-item" id="item-4"><a href="#about-link"></a></div>
+            <div class="web-item" id="item-5"><a href="#about-link"></a></div>
+            <div class="web-item" id="item-6"><a href="#about-link"></a></div>
+        </div>
+        <div class="about-content" id="about-link">
+            <div class="about-header"><h2>Web Archive</h2></div>
+            <div id="about-text">
+                <p>Click on a webpage to learn more!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../scripts/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/jquery.smoothState.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script>
+        $( document ).ready(function(){
+            $('body').css('opacity', 1);
+
+            var item1Content = "<div id='about-text'><h4>Tufts Observer Memory Photo Inset</h4><p>I built a digital photo inset to accompany the Tufts Observer's Memory Issue. I elected to emulate a museum gallery to portray the disjointed memories as a collection of observations.</p><a target='_blank' href='http://tuftsobserver.org/photo-inset/memory2018/'><p>Visit Site</p></a></div>";
+            var item2Content = "<div id='about-text'><h4>Tufts Observer Labor Podcast</h4><p>I built an editorial podcast for the Tufts Observer. The main goals of this project were to unite 6 unrelated responses to the prompt 'What does labor mean to you?' and present them in a logical manner. I elected to have a stack of each audio clip's associated photo sort into a bulletin board-esque grid upon exploration of the editorial.</p><a target='_blank' href='http://tuftsobserver.org/multimedia/labor2017/'><p>Visit Site</p></a></div>";
+            var item3Content = "<div id='about-text'><h4>Tufts Observer 2018 Literary Issue</h4><p>I contributed to the Tufts Observer's 2018 Literary Issue. As a member of the team, I created web experiences for the issue's photo inset, 'Chains We Don't See,' 'Diaspora Daughter Blues,' 'Seja Meu Refugio,' 'For the Safety of Indian Women,' 'Sec. 906,' 'Bumblebees,' and 'Chaco Canyon' articles.</p><a target='_blank' href='http://tuftsobserver.org/multimedia/lit2018/'><p>Visit Site</p></a></div>";
+            var item4Content = "<div id='about-text'><h4>Tufts Observer 2018 Queerness Issue</h4><p>I contributed to the Tufts Observer's annual Queerness Issue. The meat of this project involved replicating the physical issue digitally. I digitized 'Letter from the Editors,' 'What is Poverty?,' 'Figs,' and 'What's in a Name?'</p><a target='_blank' href='http://tuftsobserver.org/multimedia/queerness2017/'><p>Visit Site</p></a></div>";
+            var item5Content = "<div id='about-text'><h4>Blue Lake Press Main Site</h4><p>Several of my friends recently started a literary magazine at Tufts. They asked me to help construct a clean and straightforward website to showcase their magazine.</p><a target='_blank' href='https://hanstercek.github.io/bluelakepress/index.html'><p>Visit Site</p></a></div>";
+            var item6Content = "<div id='about-text'><h4>CMYK Main Site</h4><p>A friend started a zine to promote creative expression at Tufts. He approached me for help with a website and I drafted a visual-centric approach. Unfortunately, the zine was short-lived and my site never saw the light of day, but it was a great experiment.</p><a target='_blank' href='https://github.com/hanstercek/CMYK'><p>Visit Site</p></a></div>";
+            
+            $('#item-1').click(function(e){
+                $('#item-1').removeClass('blurred');
+                $('.web-item').not(this).addClass('blurred');
+                $('#about-text').replaceWith(item1Content);
+            });
+            $('#item-2').click(function(e){
+                $('#item-2').removeClass('blurred');
+                $('.web-item').not(this).addClass('blurred');
+                $('#about-text').replaceWith(item2Content);
+            });
+            $('#item-3').click(function(e){
+                $('#item-3').removeClass('blurred');
+                $('.web-item').not(this).addClass('blurred');
+                $('#about-text').replaceWith(item3Content);
+            });
+            $('#item-4').click(function(e){
+                $('#item-4').removeClass('blurred');
+                $('.web-item').not(this).addClass('blurred');
+                $('#about-text').replaceWith(item4Content);
+            });
+            $('#item-5').click(function(e){
+                $('#item-5').removeClass('blurred');
+                $('.web-item').not(this).addClass('blurred');
+                $('#about-text').replaceWith(item5Content);
+            });
+            $('#item-6').click(function(e){
+                $('#item-6').removeClass('blurred');
+                $('.web-item').not(this).addClass('blurred');
+                $('#about-text').replaceWith(item6Content);
+            });
+        });
+        
+    </script>
+</body>
+</html>

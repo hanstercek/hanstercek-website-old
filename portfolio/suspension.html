@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+
+    <title>Hans Tercek | Suspension</title>
+    <meta name="description" content="Hans Tercek: mechanical engineer and computer scientist.">
+
+    <meta property="og:url"            content="">
+    <meta property="og:type"           content="website">
+    <meta property="og:title"          content="Hans Tercek | Suspension">
+    <meta property="og:description"    content="Hans Tercek: mechanical engineer and computer scientist.">
+    <meta property="og:image"          content="">
+    <meta name="twitter:card"          content="summary_large_image">
+    <meta name="twitter:site"          content="">
+    <meta name="twitter:creator"       content="">
+    <meta name="twitter:title"         content="Hans Tercek | Suspension">
+    <meta name="twitter:description"   content="Hans Tercek: mechanical engineer and computer scientist.">
+    <meta name="twitter:image:src"     content="">
+
+    <!-- Stylesheets -->
+    <link rel="icon" href="../img/sign.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../styles/skeleton.css" type="text/css">
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
+    <link rel="stylesheet" href="../styles/portfolio.css" type="text/css">
+    <style>
+        #img-1 {
+            background-image: url('../img/portfolio/suspension/suspension-1.gif');
+        }
+        #img-2 {
+            background-image: url('../img/portfolio/suspension/suspension-2.gif');
+        }
+        #img-3 {
+            background-image: url('../img/portfolio/suspension/suspension-3.gif');
+        }
+        #img-4 {
+            background-image: url('../img/portfolio/suspension/suspension-4.gif');
+        }
+    </style>
+</head>
+<body>
+    <div class="sign-nav"><a href="../index.html"><img src="../img/sign_exit.png" /></a></div>
+    <div class="content-wrapper">
+        <div class="carousel-container">
+            <h2>Suspension Redesign</h2>
+            <div id="carousel">
+                <div id="c-right">
+                    <h4>&#9758;</h4>
+                </div>
+                <div id="c-left">
+                    <h4>&#9756;</h4>
+                </div>
+                <div id="c-images">
+                    <div class="c-image" id="img-1"></div>
+                    <div class="c-image" id="img-2"></div>
+                    <div class="c-image" id="img-3"></div>
+                    <div class="c-image" id="img-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content-text">
+            <h5>about</h5>
+            <p>A poorly designed suspension resulted in a catastrophic failure at competition for Tufts Formula Hybrid SAE's car. I fixed it.</p>
+            <p>Major oversights in the design of theTufts Formula Hybrid SAE (Society of Automotive Engineers) car's rear suspension resulted in failures during the 2016 season. As a result, our team made a complete systematic overhaul its priority #1 for the 2016-2017 season. I was elected to lead this redesign.</p>
+            <p>I assembled a team of over 25 members, engineers and others, and began work, educating new members on the fundamentals of suspension design, how to design using CAD software, how to work in the machine shop, and working with veterans to brainstorm potential solutions.</p>
+            <p>We conceptualized several ideas before settling on our final positioning. I conducted the modeling, FEA, and assembly and delivered a final product that functioned as intended in every aspect, deflecting 1" under max load, and rebounding (at maximum) 1", all without modifying the car's existing chassis and maintaining a footprint that did not interfere with the car's new drive train or other preexisting components.</p>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="../scripts/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/jquery.smoothState.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script>
+        $( document ).ready(function(){
+            $('body').css('opacity', 1);
+        });
+        var numImg = 4;
+        numImg = numImg - 1;
+        var maxWidth = 100 * numImg;
+        var currLeft = 0;
+        $('#c-right').click(function(e) {
+            var newLeft = currLeft -  100;
+            if (newLeft < -maxWidth) {
+                currLeft = 0;
+            } else {
+                currLeft = newLeft;
+            }
+            $('#c-images').css('left', currLeft + '%')
+        })
+        $('#c-left').click(function(e) {
+            var newLeft = currLeft + 100;
+            if (newLeft > 0) {
+                currLeft = -(maxWidth);
+            } else {
+                currLeft = newLeft;
+            }
+            $('#c-images').css('left', currLeft + '%')
+        })
+        // Timer
+        var carouselClicked = false;
+        $('#carousel').mouseenter(function() { carouselClicked = true; });
+        $('#carousel').mouseleave(function() { carouselClicked = false; });
+        setInterval(function(){ if (!carouselClicked) { $('#c-right').trigger('click') }}, 5000);
+    </script>
+</body>
+</html>

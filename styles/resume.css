@@ -1,0 +1,5 @@
+.resume {
+    height: 100vh;
+    background-color: red;
+    animation: fadeInRight 0.25s ease-in;
+}

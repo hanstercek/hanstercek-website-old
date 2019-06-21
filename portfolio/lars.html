@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+
+    <title>Hans Tercek | L&RS</title>
+    <meta name="description" content="Hans Tercek: mechanical engineer and computer scientist.">
+
+    <meta property="og:url"            content="">
+    <meta property="og:type"           content="website">
+    <meta property="og:title"          content="Hans Tercek | L&RS">
+    <meta property="og:description"    content="Hans Tercek: mechanical engineer and computer scientist.">
+    <meta property="og:image"          content="">
+    <meta name="twitter:card"          content="summary_large_image">
+    <meta name="twitter:site"          content="">
+    <meta name="twitter:creator"       content="">
+    <meta name="twitter:title"         content="Hans Tercek | L&RS">
+    <meta name="twitter:description"   content="Hans Tercek: mechanical engineer and computer scientist.">
+    <meta name="twitter:image:src"     content="">
+
+    <!-- Stylesheets -->
+    <link rel="icon" href="../img/sign.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../styles/skeleton.css" type="text/css">
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
+    <link rel="stylesheet" href="../styles/portfolio.css" type="text/css">
+    <style>
+        #img-1 {
+            background-image: url('../img/portfolio/lars/lars-1.gif');
+        }
+        #img-2 {
+            background-image: url('../img/portfolio/lars/lars-2.gif');
+        }
+        #img-3 {
+            background-image: url('../img/portfolio/lars/lars-3.gif');
+        }
+    </style>
+</head>
+<body>
+    <div class="sign-nav"><a href="../index.html"><img src="../img/sign_exit.png" /></a></div>
+    <div class="content-wrapper">
+        <div class="carousel-container">
+            <h2>Autonomous L&amp;RS</h2>
+            <div id="carousel">
+                <div id="c-right">
+                    <h4>&#9758;</h4>
+                </div>
+                <div id="c-left">
+                    <h4>&#9756;</h4>
+                </div>
+                <div id="c-images">
+                    <div class="c-image" id="img-1"></div>
+                    <div class="c-image" id="img-2"></div>
+                    <div class="c-image" id="img-3"></div>
+                    <div class="c-image" id="img-4"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content-text">
+            <h5>about</h5>
+            <p>Autonomous underwater vehicles needed to be launched and recovered by an autonomous boat. I designed a system.
+</p>
+            <p>In the summer of 2017, I was hired by Hydroswarm to (amongst other projects) design and build a seafaring device that could deploy and retrieve autonomous underwater vehicles roughly the size of a football.</p>
+            <p>I employed a rack-and-pinion-driven system constructed of 6061 aluminum and powered by a high torque stepper rated at minimum IP64. These specifications ensured a long product lifespan at sea with minimum maintenance:</p>
+            <div class="sub-section">
+                <p><ul>
+                    <li>6061 aluminum is resistant to corrosion in the presence of salt water.</li>
+                    <li>The low number of moving components in a rack and pinion prevents salt buildup from interfering with actuation.</li>
+                    <li>The stepper allows the system to lock in the deployed or retracted positions.</li>
+                    <li>An IP64 rating sufficiently protects the stepper against water ingress.</li>
+                    <li>Low-friction Delrin rollers serve as simple bearing replacements for an otherwise lubricant-volatile environment.</li>
+                </ul></p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="../scripts/jquery-3.2.1.min.js"></script>
+    <script src="../scripts/jquery.smoothState.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script>
+        $( document ).ready(function(){
+            $('body').css('opacity', 1);
+        });
+        var numImg = 3;
+        numImg = numImg - 1;
+        var maxWidth = 100 * numImg;
+        var currLeft = 0;
+        $('#c-right').click(function(e) {
+            var newLeft = currLeft -  100;
+            if (newLeft < -maxWidth) {
+                currLeft = 0;
+            } else {
+                currLeft = newLeft;
+            }
+            $('#c-images').css('left', currLeft + '%')
+        })
+        $('#c-left').click(function(e) {
+            var newLeft = currLeft + 100;
+            if (newLeft > 0) {
+                currLeft = -(maxWidth);
+            } else {
+                currLeft = newLeft;
+            }
+            $('#c-images').css('left', currLeft + '%')
+        })
+        // Timer
+        var carouselClicked = false;
+        $('#carousel').mouseenter(function() { carouselClicked = true; });
+        $('#carousel').mouseleave(function() { carouselClicked = false; });
+        setInterval(function(){ if (!carouselClicked) { $('#c-right').trigger('click') }}, 5000);
+    </script>
+</body>
+</html>

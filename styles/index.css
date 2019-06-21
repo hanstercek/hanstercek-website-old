@@ -1,0 +1,146 @@
+/**** Navbar ****/
+nav {
+    position: absolute;
+        z-index: 999;
+    z-index: 10;
+    background: #fff156;
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+
+    transition: height 1s ease;
+}
+ul {
+    position: absolute;
+        bottom: 2.5%;
+    width: 100%;
+    height: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    text-align: left;
+    font-size: 15em;
+    line-height: 1;
+}
+.sign-nav, .exit-nav {
+    position: absolute;
+        z-index: 10;
+        right: 5%;
+        top: 3.75%;
+    height: 10%;
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+}
+.sign-nav img, .exit-nav img {
+    height: 100%;
+    width: auto;
+}
+.exit-nav:hover {
+    transform: rotate(90deg);
+}
+.photo-overlay {
+    position: absolute;
+        z-index: 999;
+    width: 15%;
+    padding: 10px;
+    background: white;
+    border-radius: 3px;
+
+    display: none;
+}
+.photo-overlay img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+/**** Content ****/
+.content-container h1 {
+    font-size: 3em;
+    line-height: 1.2;
+}
+#about-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#selfie {
+    width: 30%;
+}
+#selfie img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+#about-content {
+    width: 60%;
+}
+#about-contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#about-contact a {
+    font-weight: 700;
+}
+#resume-content h5, #resume-content p {
+    padding: 0;
+    margin: 0;
+}
+#resume-content h5 {
+    padding-top: 5px;
+}
+        
+/**** MEDIA QUERIES ****/
+@media (max-width: 700px) {
+    #about-wrapper {
+        display: block;
+    }
+    #selfie {
+        width: 50%;
+        margin: 0 auto;
+    }
+    #about-content {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 550px) { 
+    .content-container h1 {
+        font-size: 2.6em;
+    }
+}
+/**** Handle Navbar text Scaling ****/
+@media (max-aspect-ratio: 4/3) {
+    nav ul li {
+        font-size: 20vw;
+    }
+}
+@media (min-aspect-ratio: 7/4) {
+    nav ul li {
+        font-size: 30vh;
+    }
+}
+
+/**** Show classes ****/
+.appear {
+    display: block;
+}
+.appear-top {
+    height: 100%;
+}
+.bold {
+    font-weight: 700;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+
+    <title>Hans Tercek | Portfolio</title>
+    <meta name="description" content="Hans Tercek: mechanical engineer and computer scientist.">
+
+    <meta property="og:url"            content="">
+    <meta property="og:type"           content="website">
+    <meta property="og:title"          content="Hans Tercek | Portfolio">
+    <meta property="og:description"    content="Hans Tercek: mechanical engineer and computer scientist.">
+    <meta property="og:image"          content="">
+    <meta name="twitter:card"          content="summary_large_image">
+    <meta name="twitter:site"          content="">
+    <meta name="twitter:creator"       content="">
+    <meta name="twitter:title"         content="Hans Tercek | Portfolio">
+    <meta name="twitter:description"   content="Hans Tercek: mechanical engineer and computer scientist.">
+    <meta name="twitter:image:src"     content="">
+
+    <!-- Stylesheets -->
+    <link rel="icon" href="img/sign.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="styles/skeleton.css" type="text/css">
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+    <link rel="stylesheet" href="styles/index.css" type="text/css">
+
+</head>
+<body>
+    <div class="photo-overlay"><img src="img/headshot.jpg" /></div>
+    <div class="sign-nav"><img src="img/sign.png" /></div>
+    <div class="content-container">
+
+        
+    </div>
+
+    <nav class="main-nav">
+        <div class="exit-nav"><img src="img/exit_x.png" /></div>
+        <ul>
+            <li class="nav-link"><a href="javascript:;" class="about-link">About</a></li>
+            <li class="nav-link"><a href="past.html">Portfolio</a></li>
+            <li class="nav-link"><a href="javascript:;" class="resume-link">Resume</a></li>
+        </ul>
+    </nav>
+    <!-- Scripts -->
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/jquery.smoothState.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+        $( document ).ready(function() {
+            $('body').css('opacity', 1);
+            
+            var mainContent = "<div class='content-container'><h1>Hello, my name is <a class='about-link' href='javascript:;'>Hans Tercek</a>. I graduated from Tufts University in 2018 with a degree in mechanical engineering and computer science. I'm currently a full-time technical sales engineer in the factory automation sphere. Some past projects I'm proud of are my <a href='portfolio/rematerials.html'>automated impact tester</a>, a <a href='portfolio/lars.html'>system for deployment &amp; retrieval of submersibles</a>, a <a href='portfolio/maze.html'>programming game for young children</a>, and an <a href='portfolio/suspension.html'>electric car suspension redesign</a>. Thanks for visiting!</h1></div>";
+            var aboutContent = "<div class='content-container'><div id='about-wrapper'><div id='selfie'><img src='img/bw_headshot.png' /></div><div id='about-content'><p>Born and raised in Beverly Hills, California, Hans Tercek graduated Tufts University in Medford, MA, in 2018 with a B.S. Mechanical Engineering with minor in Computer Science.</p><p>At Tufts, Hans was a member of the Tufts Hybrid Race Team, served as an analyst for Tufts Consulting Collective, captained Tufts Club Water Polo, served as Director of Diversity &amp; Inclusion for Delta Tau Delta - Beta Mu, contributed to web development for the Tufts Observer, and was a radio host for WMFO.</p><p>Previously, Hans attended Beverly Hills High School, where he founded a radio station, lettered and received MVP recognition in both water polo and lacrosse, and captained the school's FIRST Robotics Competition build team.</p><p>Professionally, Hans is interested in automation, robotics, business strategy/development, and the financial markets. In his free time, Hans can be found reworking his personal site (for the 50th time), playing music in his room, or discussing the markets over a meal with his friends.</p><div id='about-contact'><a href='mailto:hans.tercek@gmail.com'>Email</a><a href='https://www.linkedin.com/in/hans-tercek-935b4085' target='_blank'>LinkedIn</a><a href='http://www.github.com/hanstercek' target='_blank'>GitHub</a></div></div></div></div>"
+            var resumeContent = "<div class='content-container'><div id='resume-content'><h5>EDUCATION</h5><div class='sub-section'><p><span class='bold'>Tufts University,</span> Medford, MA</p><div class='sub-section'><p>Bachelor of Science in Mechanical Engineering, expected May 2018</p><p>Minor: Computer Science</p><p>Honors: O'Leary Design Award Recipient, Dean's List, Kershner Scholar</p></div><p><span class='bold'>Beverly Hills High School,</span> Beverly Hills, CA</p><div class='sub-section'><p>Honors: BHHS PTSA Scholarship Recipient, National Merit Commended Scholar, National AP Scholar</p><p>Graduated: May 2014</p></div></div><h5>PROJECTS</h5><div class='sub-section'><p><span class='bold'>Tufts ME-43 - ReMaterials Impact Tester,</span><span class='italic'> Electrical and Software Lead</span>, Fall 2017</p><div class='sub-section'><p>- Designing and deploying a low-cost impact tester for ReMaterials, an India-based roofing company.</p><p>- Lead electrical/software development and heavily contributed to machine design and fabrication.</p><p>- Traveled to Hyderabad, India, in January to meet with company and deploy product.</p></div><p><span class='bold'>Tufts Formula Hybrid - Suspension Redesign,</span><span class='italic'> Project Lead, CAD Engineer, and Machinist</span>, 2015-2017</p><div class='sub-section'><p>- Led 25+ member team to redesign and construct car’s rear suspension to meet FSAE specifications.</p><p>- Design, machine and assemble various additional components.</p></div><p><span class='bold'>Industry Square,</span><span class='italic'> Chief Operating Officer</span>, 2016 - Present</p><div class='sub-section'><p>- Developing web platform with 5-member team aimed at simplifying the life sciences marketplace.</p><p>- Conduct market research for platform development and actively work on business strategy.</p></div></div><h5>TECHNICAL EXPERIENCE</h5><div class='sub-section'><p><a href='http://www.hydroswarm.com/'><span class='bold'>Hydroswarm,</span></a> Cambridge, MA</p><p><span class='italic'>Engineering Intern</span>, June - July 2017</p><div class='sub-section'><p>- Developed, presented, and prototyped autonomous boat technologies focused on launch and retrieval of autonomous underwater vehicles.</p><p>- Skills Used: SolidWorks, Arduino IDE, Raspberry Pi, Python, C++, electrical board design and assembly, 3D Printing (FDM), Rapid Prototyping</p></div><p><a href='http://colab.co/'><span class='bold'>The Company Lab,</span></a> Chattanooga, TN</p><p><span class='italic'>Mechanical Engineering Specialist</span>, May - July 2016</p><div class='sub-section'><p>- Worked with startups, including Collider Tech and UTChattSat, on CAD work, 3D printing, product research and design development, and prototyping of individual components and systems.</p><p>- Researched and developed alternative print methods for SLA printing using LCDs and optics.</p><p>- Skills Used: SolidWorks, 3D Printing (SLA and FDM), Laser Cutting, Metal Machining</p></div><p><a href='http://www.pi-top.com'><span class='bold'>Pi-top,</span></a> London, UK</p><p><span class='italic'>Engineering Intern</span>, July - August 2015</p><div class='sub-section'><p>- Led packaging design for the Pi-top and aided in product development for the Pi-top CEED.</p><p>- Collaborated with overseas manufacturers to optimize manufacturing costs based on drawing packets.</p><p>- Skills Used: SolidWorks, Raspberry Pi, 3D Printing (FDM), Adobe Suite</p></div></div><h5>ADDITIONAL EXPERIENCE and LEADERSHIP</h5><div class='sub-section'><p><span class='bold'>Tufts ME-84: Intro to Robotics,</span><span class='italic'> Teaching Assistant</span>, Spring 2018</p><div class='sub-section'><p>- Will be assisting in instruction and course development of Raspberry Pi-centered robotics curriculum.</p></div><p><span class='bold'>Tufts Club Water Polo, </span><span class='italic'> Captain, Coach, Goalie</span>, 2015 - Present</p><div class='sub-section'><p>- Captained, coached, and played goalie, leading team to a second place national title.</p></div><p><span class='bold'>Delta Tau Delta - Beta Mu, </span><span class='italic'> Director of Diversity and Inclusion</span>, 2016 - 2017</p><div class='sub-section'><p><span class='italic'>Director of Academic Affairs</span>, 2015 - 2016</p></div><p><a href='http://tuftsobserver.org'><span class='bold'>Tufts Observer, </span></a><span class='italic'> Multimedia Team - Web</span>, October 2016 - Present</p><p><span class='bold'>Tufts Consulting Collective, </span><span class='italic'> Analyst</span>, September 2016 - Present</p><div class='sub-section'><p>- Working with dentistry startup to determine optimal pricepoint for market entry.</p></div><p><span class='bold'>Tufts STOMP, </span><span class='italic'> Shadow</span>, September - December 2015</p><div class='sub-section'><p>- Assisted in STEM curriculum development and presentation to Somerville students in grades K-8.</p></div><p><span class='bold'>Tufts University, </span><span class='italic'> Orientation Leader</span>, August - September 2015</p><div class='sub-section'><p>- Oriented 20 engineering students to Tufts, offering advice and connecting them with professors and other on-campus resources.</p></div></div><h5>ACTIVITIES and ATHLETICS</h5><div class='sub-section'><p><span class='bold'>Troop 33 - Beverly Hills, </span><span class='italic'> Eagle Scout</span></p><p><span class='bold'>German,</span><span class='italic'> Intermediate proficiency</span></p><p><span class='bold'>FIRST FRC Team 1515,</span><span class='italic'> Build Captain</span>, 2010 - 2014</p><p><a href='https://www.facebook.com/RadioAirlift/'><span class='bold'>Radio Airlift,</span></a><span class='italic'> Co-Founder and Radio Host</span>, 2012 - 2014</p></div><br /><br /><h5>RELEVANT COURSEWORK</h5><div class='sub-section'><p class='bold'>Mechanical Engineering</p><div class='sub-section'><p>- ME-184: Advanced Robotics</p><p>- ME-84: Intro. to Robotics and Mechatronics</p><p>- ME-80: System Dynamics and Controls</p><p>- ME-43: Senior Design: Design for Emerging Markets</p><p>- ME-42: Machine Design</p><p>- ME-37: Dynamics &amp; Vibration</p><p>- ME-25: Engineering Materials</p><p>- ME-18: Instruments &amp; Experiments</p><p>- ME-16: Heat Transfer</p></div><p class='bold'>Computer Science</p><div class='sub-section'><p>- Languages: Python, C++, JavaScript, SML, Scheme, HTML, CSS</p><p>- COMP-15: Data Structures</p><p>- COMP-20: Web Programming</p><p>- COMP-105: Programming Languages</p></div><p class='bold'>Scheduled Credits</p><div class='sub-section'><p>- ME-93: Optimal Control for Robotics</p><p>- COMP-160: Algorithms</p></div></div><br /><p><a href='files/Hans_Tercek_Resume_Spring_2018.pdf' download>DOWNLOAD PDF</a></p></div><!-- Resume content --></div>";
+
+            $('.content-container').replaceWith(mainContent)
+            $('.about-link').click(function(e){ // ANIMATE
+                $('.content-container').replaceWith(aboutContent) 
+            });
+            $('.resume-link').click(function(){ $('.content-container').replaceWith(resumeContent) });
+            $('.sign-nav').click(function(){ $('nav').addClass('appear-top') });
+            $('.exit-nav, .nav-link').click(function(){ $('nav').removeClass('appear-top') });
+        });
+
+
+    </script>
+
+    <!-- EDITABLE RESUME CONTENT
+
+        <div id="resume-content">
+            <h5>EDUCATION</h5>
+            <div class="sub-section">
+                <p><span class="bold">Tufts University,</span> Medford, MA</p>
+                <div class="sub-section">
+                    <p>Bachelor of Science in Mechanical Engineering, expected May 2018</p>
+                    <p>Minor: Computer Science</p>
+                    <p>Honors: O'Leary Design Award Recipient, Dean's List, Kershner Scholar</p>
+                </div>
+                <p><span class="bold">Beverly Hills High School,</span> Beverly Hills, CA</p>
+                <div class="sub-section">
+                    <p>Honors: BHHS PTSA Scholarship Recipient, National Merit Commended Scholar, National AP Scholar</p>
+                    <p>Graduated: May 2014</p>
+                </div>
+            </div>
+            <h5>PROJECTS</h5>
+            <div class="sub-section">
+                <p><span class="bold">Tufts ME-43 - ReMaterials Impact Tester,</span><span class="italic"> Electrical and Software Lead</span>, Fall 2017</p>
+                <div class="sub-section">
+                    <p>- Designing and deploying a low-cost impact tester for ReMaterials, an India-based roofing company.</p>
+                    <p>- Lead electrical/software development and heavily contributed to machine design and fabrication.</p>
+                    <p>- Traveled to Hyderabad, India, in January to meet with company and deploy product.</p>
+                </div>
+                <p><span class="bold">Tufts Formula Hybrid - Suspension Redesign,</span><span class="italic"> Project Lead, CAD Engineer, and Machinist</span>, 2015-2017</p>
+                <div class="sub-section">
+                    <p>- Led 25+ member team to redesign and construct car’s rear suspension to meet FSAE specifications.</p>
+                    <p>- Design, machine and assemble various additional components.</p>
+                </div>
+                <p><span class="bold">Industry Square,</span><span class="italic"> Chief Operating Officer</span>, 2016 - Present</p>
+                <div class="sub-section">
+                    <p>- Developing web platform with 5-member team aimed at simplifying the life sciences marketplace.</p>
+                    <p>- Conduct market research for platform development and actively work on business strategy.</p>
+                </div>
+            </div>
+            <h5>TECHNICAL EXPERIENCE</h5>
+            <div class="sub-section">
+                <p><a href="http://www.hydroswarm.com/"><span class="bold">Hydroswarm,</span></a> Cambridge, MA</p>
+                <p><span class="italic">Engineering Intern</span>, June - July 2017</p>
+                <div class="sub-section">
+                    <p>- Developed, presented, and prototyped autonomous boat technologies focused on launch and retrieval of autonomous underwater vehicles.</p>
+                    <p>- Skills Used: SolidWorks, Arduino IDE, Raspberry Pi, Python, C++, electrical board design and assembly, 3D Printing (FDM), Rapid Prototyping</p>
+                </div>
+                <p><a href="http://colab.co/"><span class="bold">The Company Lab,</span></a> Chattanooga, TN</p>
+                <p><span class="italic">Mechanical Engineering Specialist</span>, May - July 2016</p>
+                <div class="sub-section">
+                    <p>- Worked with startups, including Collider Tech and UTChattSat, on CAD work, 3D printing, product research and design development, and prototyping of individual components and systems.</p>
+                    <p>- Researched and developed alternative print methods for SLA printing using LCDs and optics.</p>
+                    <p>- Skills Used: SolidWorks, 3D Printing (SLA and FDM), Laser Cutting, Metal Machining</p>
+                </div>
+                <p><a href="http://www.pi-top.com"><span class="bold">Pi-top,</span></a> London, UK</p>
+                <p><span class="italic">Engineering Intern</span>, July - August 2015</p>
+                <div class="sub-section">
+                    <p>- Led packaging design for the Pi-top and aided in product development for the Pi-top CEED.</p>
+                    <p>- Collaborated with overseas manufacturers to optimize manufacturing costs based on drawing packets.</p>
+                    <p>- Skills Used: SolidWorks, Raspberry Pi, 3D Printing (FDM), Adobe Suite</p>
+                </div>
+            </div>
+            <h5>ADDITIONAL EXPERIENCE and LEADERSHIP</h5>
+            <div class="sub-section">
+                <p><span class="bold">Tufts ME-84: Intro to Robotics,</span><span class="italic"> Teaching Assistant</span>, Spring 2018</p>
+                <div class="sub-section">
+                    <p>- Will be assisting in instruction and course development of Raspberry Pi-centered robotics curriculum.</p>
+                </div>
+                <p><span class="bold">Tufts Club Water Polo, </span><span class="italic"> Captain, Coach, Goalie</span>, 2015 - Present</p>
+                <div class="sub-section">
+                    <p>- Captained, coached, and played goalie, leading team to a second place national title.</p>
+                </div>
+                <p><span class="bold">Delta Tau Delta - Beta Mu, </span><span class="italic"> Director of Diversity and Inclusion</span>, 2016 - 2017</p>
+                <div class="sub-section"><p><span class="italic">Director of Academic Affairs</span>, 2015 - 2016</p></div>
+                <p><a href="http://tuftsobserver.org"><span class="bold">Tufts Observer, </span></a><span class="italic"> Multimedia Team - Web</span>, October 2016 - Present</p>
+                <p><span class="bold">Tufts Consulting Collective, </span><span class="italic"> Analyst</span>, September 2016 - Present</p>
+                <div class="sub-section">
+                    <p>- Working with dentistry startup to determine optimal pricepoint for market entry.</p>
+                </div>
+                <p><span class="bold">Tufts STOMP, </span><span class="italic"> Shadow</span>, September - December 2015</p>
+                <div class="sub-section">
+                    <p>- Assisted in STEM curriculum development and presentation to Somerville students in grades K-8.</p>
+                </div>
+                <p><span class="bold">Tufts University, </span><span class="italic"> Orientation Leader</span>, August - September 2015</p>
+                <div class="sub-section">
+                    <p>- Oriented 20 engineering students to Tufts, offering advice and connecting them with professors and other on-campus resources.</p>
+                </div>
+            </div>
+            <h5>ACTIVITIES and ATHLETICS</h5>
+            <div class="sub-section">
+                <p><span class="bold">Troop 33 - Beverly Hills, </span><span class="italic"> Eagle Scout</span></p>
+                <p><span class="bold">German,</span><span class="italic"> Intermediate proficiency</span></p>
+                <p><span class="bold">FIRST FRC Team 1515,</span><span class="italic"> Build Captain</span>, 2010 - 2014</p>
+                <p><a href="https://www.facebook.com/RadioAirlift/"><span class="bold">Radio Airlift,</span></a><span class="italic"> Co-Founder and Radio Host</span>, 2012 - 2014</p>
+            </div>
+            <br />
+            <br />
+            <h5>RELEVANT COURSEWORK</h5>
+            <div class="sub-section">
+                <p class="bold">Mechanical Engineering</p>
+                <div class="sub-section">
+                    <p>- ME-184: Advanced Robotics</p>
+                    <p>- ME-84: Intro. to Robotics and Mechatronics</p>
+                    <p>- ME-80: System Dynamics and Controls</p>
+                    <p>- ME-43: Senior Design: Design for Emerging Markets</p>
+                    <p>- ME-42: Machine Design</p>
+                    <p>- ME-37: Dynamics &amp; Vibration</p>
+                    <p>- ME-25: Engineering Materials</p>
+                    <p>- ME-18: Instruments &amp; Experiments</p>
+                    <p>- ME-16: Heat Transfer</p>
+                </div>
+                <p class="bold">Computer Science</p>
+                <div class="sub-section">
+                    <p>- Languages: Python, C++, JavaScript, SML, Scheme, HTML, CSS</p>
+                    <p>- COMP-15: Data Structures</p>
+                    <p>- COMP-20: Web Programming</p>
+                    <p>- COMP-105: Programming Languages</p>
+                </div>
+                <p class="bold">Scheduled Credits</p>
+                <div class="sub-section">
+                    <p>- ME-93: Optimal Control for Robotics</p>
+                    <p>- COMP-160: Algorithms</p>
+                </div>
+            </div>
+            <br />
+            <p><a href="files/Hans_Tercek_Resume_Spring_2018.pdf" download>DOWNLOAD PDF</a></p>
+        </div>
+
+    -->
+</body>
+</html>
